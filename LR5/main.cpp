@@ -7,10 +7,10 @@ using namespace std;
 
 void nA() {
 	int n, m;
-	cout << "Ââåäèòå ðàçìåð ìàòðèöû n <= 10 è m <= 10: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ n <= 10 Ð¸ m <= 10: " << endl;
 	cin >> n >> m;
 	if (n > 10 || m > 10) {
-		cout << "Íåâåðíûé ââîä";	
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´";	
 		return;
 	}
 
@@ -19,11 +19,11 @@ void nA() {
 		
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			A[i][j] = 10 * (j + 1); // ïîëó÷àåì 10 20 30 è òä
+			A[i][j] = 10 * (j + 1); // Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ 10 20 30 Ð¸ Ñ‚Ð´
 		}
 	}
 	
-	cout << "Èòîãîâûé ìàññèâ: \n";
+	cout << "Ð˜Ñ‚Ð¾Ð³Ð¾Ð²Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: \n";
 	int s = 8;
 	int step = 4;
 
@@ -34,7 +34,7 @@ void nA() {
 		cout << endl;
 
 		s = s - step;
-		if (s == 0 || s == 8) step = -step; // íà÷èíàåì ïðèáàâëÿòü èëè íàîáîðîò îòáàâëÿòü, åñëè äîøëè äî êðàÿ
+		if (s == 0 || s == 8) step = -step; // Ð½Ð°Ñ‡Ð¸Ð½Ð°ÐµÐ¼ Ð¿Ñ€Ð¸Ð±Ð°Ð²Ð»ÑÑ‚ÑŒ Ð¸Ð»Ð¸ Ð½Ð°Ð¾Ð±Ð¾Ñ€Ð¾Ñ‚ Ð¾Ñ‚Ð±Ð°Ð²Ð»ÑÑ‚ÑŒ, ÐµÑÐ»Ð¸ Ð´Ð¾ÑˆÐ»Ð¸ Ð´Ð¾ ÐºÑ€Ð°Ñ
 	}
 
 	for (int i = 0; i < n; i++) delete[] A[i];
@@ -46,22 +46,22 @@ void nA() {
 
 void nB() {
 	int n, m, s = 0;
-	cout << "Ââåäèòå ðàçìåð ìàòðèöû n <= 7 è m <= 9: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ n <= 7 Ð¸ m <= 9: " << endl;
 	cin >> n >> m;
 	if (n > 7 || m > 9) {
-		cout << "Íåâåðíûé ââîä";
+		cout << "ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´";
 		return;
 	}
 	vector<int> sm;
 	int** A = new int* [n];
 	for (int i = 0; i < n; i++) A[i] = new int[m];						
-	cout << "Ââåäèòå ýë-òû ìàññèâà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»-Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << endl;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cin >> A[i][j];
 		}
 	}
-	cout << "Èñõîäíàÿ ìàòðèöà \n";				
+	cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð° \n";				
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cout << A[i][j] << " ";
@@ -77,7 +77,7 @@ void nB() {
 		sm.push_back(s);
 		s = 0;
 	}
-	cout << "Ñóììû \n";
+	cout << "Ð¡ÑƒÐ¼Ð¼Ñ‹ \n";
 	for (int i = 0; i < sm.size(); i++)
 		cout << sm[i] << " ";
 	cout << endl;
@@ -93,23 +93,25 @@ void nB() {
 		}
 		if (is == true) {
 			found = true;
-			cout << "Ïîâòîðÿþòñÿ " << sm[i] << " â ìàññèâå íà ïîçèöèÿõ: ";
+			cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€ÑÑŽÑ‚ÑÑ " << sm[i] << " Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ Ð½Ð° Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑÑ…: ";
 			vector<int> pos;
 			for (int k = 0; k < sm.size(); k++) {
-				if (sm[k] == sm[i]) cout << k << " ";		
-				pos.push_back(k);
+				if (sm[k] == sm[i]) {
+					cout << k << " ";
+					pos.push_back(k);
+				}
 			}
 			cout << endl;
 			for (int p = 1; p < pos.size(); p++) {
-				swap(A[0], A[pos[p]]);
+				swap(A[pos[0]], A[pos[p]]);
 			}
 		}
 		
 	}
-	if (found == false) cout << "Ïîâòîðÿþùèõñÿ ñóìì íåò" << endl;
+	if (found == false) cout << "ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€ÑÑŽÑ‰Ð¸Ñ…ÑÑ ÑÑƒÐ¼Ð¼ Ð½ÐµÑ‚" << endl;
 
 
-	cout << "Ìàòðèöà ïîñëå ïåðåñòàíîâîê: \n";
+	cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¿ÐµÑ€ÐµÑÑ‚Ð°Ð½Ð¾Ð²Ð¾Ðº: \n";
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cout << A[i][j] << " ";
